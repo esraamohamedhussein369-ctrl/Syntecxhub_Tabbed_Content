@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntecxhub Internship - Task 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Top Navigation Bar -->
+        <header class="top-nav">
+            <div class="brand-info">
+                <div class="brand-logo">S</div>
+                <div class="brand-text">
+                    <h1>Syntecxhub Internship</h1>
+                    <p>Task 3: Interactive Tabbed Content Section</p>
+                </div>
+            </div>
+            <div class="status-badge">
+                <span class="status-dot"></span> Task 3 Complete
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="module-tag">FRONTEND ARCHITECTURE MODULE</div>
+            <h2>Interactive Tabbed Content Component</h2>
+            <p>Switch seamlessly between Overview, Technical Specifications, and Internship Submission Details.</p>
+        </section>
+
+        <!-- Tabbed Component Card -->
+        <div class="tab-card">
+            <!-- Tabs Navigation -->
+            <div class="tabs-header" id="tabs-header">
+                <div class="active-indicator" id="active-indicator"></div>
+                <button class="tab-btn active" data-target="overview-tab">
+                    <i class="fa-solid fa-compass"></i> Overview
+                </button>
+                <button class="tab-btn" data-target="specs-tab">
+                    <i class="fa-solid fa-code-branch"></i> Info &amp; Specs
+                </button>
+                <button class="tab-btn" data-target="contact-tab">
+                    <i class="fa-solid fa-paper-plane"></i> Contact &amp; Submit
+                </button>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div class="tab-content-container">
+                
+                <!-- 1. Overview Tab -->
+                <div class="tab-pane active" id="overview-tab">
+                    <div class="pane-header">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h3>Internship Program Overview</h3>
+                    </div>
+                    <p class="overview-desc">
+                        Welcome to the official frontend demonstration for the <strong>Syntecxhub Internship Program</strong>. This component brings together high-standard web development techniques, responsive modular styling, and modern DOM manipulations into a clean user interface.
+                    </p>
+
+                    <!-- Cards Grid -->
+                    <div class="info-cards-grid">
+                        <div class="info-card">
+                            <div class="card-icon html-icon"><i class="fa-solid fa-code"></i></div>
+                            <h4>Semantic HTML5</h4>
+                            <p>Structured document layout with clear accessibility tags and SEO fundamentals.</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="card-icon css-icon"><i class="fa-solid fa-paintbrush"></i></div>
+                            <h4>Tailwind CSS</h4>
+                            <p>Utility-first design with fluid widths, grid layouts, and dark mode aesthetics.</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="card-icon js-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <h4>Vanilla ES6+ JS</h4>
+                            <p>Clean event listener management without reliance on bloated frameworks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Objectives Box -->
+                    <div class="objectives-box">
+                        <h5>KEY OBJECTIVES INCLUDED</h5>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Single-page application architecture</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 100% Mobile &amp; Desktop responsiveness</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Smooth animated indicator transitions</li>
+                            <li><i class="fa-solid fa-circle-check"></i> LinkedIn &amp; GitHub submission ready</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Info & Specs Tab -->
+                <div class="tab-pane" id="specs-tab">
+                    <div class="pane-header">
+                        <i class="fa-solid fa-sliders"></i>
+                        <h3>Technical Specifications &amp; Performance</h3>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">Lighthouse Score</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">0ms</span>
+                            <span class="stat-label">Dependency Overhead</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">A+</span>
+                            <span class="stat-label">Code Quality Rating</span>
+                        </div>
+                    </div>
+
+                    <div class="module-breakdown-title">MODULE BREAKDOWN</div>
+
+                    <!-- Accordions -->
+                    <div class="accordion-list">
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <span>DOM Dynamic Binding &amp; Event Delegation</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Dynamically calculates the exact position and width of active tab targets to position the sliding border line seamlessly without hardcoded pixel coordinates.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item" onclick="toggleAccordion(this)">
+                            <div class="accordion-header">
+                                <span>Zero External Library Overhead</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-body">
+                                <p>Built completely using standard ES6 features (element class switching, offset dimensions calculations, and form event handling) ensuring maximum execution speed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Contact & Submit Tab -->
+                <div class="tab-pane" id="contact-tab">
+                    <div class="pane-header">
+                        <i class="fa-solid fa-award"></i>
+                        <h3>Internship Submission &amp; Contact</h3>
+                    </div>
+
+                    <!-- Copy Repo Box -->
+                    <div class="copy-box">
+                        <div class="copy-box-info">
+                            <span class="copy-title">REQUIRED GITHUB REPOSITORY NAME</span>
+                            <span class="copy-sub">Syntecxhub Rule</span>
+                        </div>
+                        <div class="copy-action">
+                            <code id="repo-name">Syntecxhub_Tabbed_Content</code>
+                            <button class="copy-btn" onclick="copyRepoName()">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Linkedin Box -->
+                    <div class="linkedin-notice">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn Submission Requirement:</strong>
+                            <p>Share your project completion status on LinkedIn tagging @Syntecxhub and attach your repository link before submitting through the official form!</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="form-section-title">SEND FEEDBACK / CONTACT INSTRUCTOR</div>
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" placeholder="student@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Notes / Questions</label>
+                            <textarea placeholder="Write your task submission notes here..." rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Form Details</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <p>&copy; 2026 Syntecxhub Front-End Internship Showcase</p>
+            <p class="footer-repo">Repository: Syntecxhub_Tabbed_Content</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
